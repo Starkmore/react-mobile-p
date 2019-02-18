@@ -142,7 +142,7 @@ npm  run eject
 
 
  #### 4.react-router4.x安装
- 温馨提示: 此过程不包含怎么使用,详细说明请参见官方文档及我的个人[demo](https://note.youdao.com/)
+ 温馨提示: 此过程不包含怎么使用,详细说明请参见官方文档及我的个人[demo](https://github.com/Starkmore/react-mobile-demo)
  ```
  $  npm install react-router react-router-dom  --save-dev
  ```
@@ -191,7 +191,7 @@ npm  run eject
 
 #### 6. react-redux(react状态管理)
 
- 温馨提示: 此过程不包含怎么使用,详细说明请参见官方文档及我的个人[demo](https://note.youdao.com/)
+ 温馨提示: 此过程不包含怎么使用,详细说明请参见官方文档及我的个人[demo](https://github.com/Starkmore/react-mobile-demo)
  
  基础安装，按照项目需求按需引入
 ```
