@@ -56,7 +56,7 @@ npm  run eject
  
   ["import", {"libraryName": "antd-mobile", "libraryDirectory":"es", "style": true}],
 ```
-```
+```js
 {
   ...
     {
@@ -98,7 +98,7 @@ npm  run eject
 **主题设置**
 
 首先在 package.json中配置：
-```
+```js
     {
         ...
           "theme": {
@@ -109,7 +109,7 @@ npm  run eject
     }
 ```
 在webpack.config.js文件中 获取主题色，在rules配置主题色
-```
+```js
     //  antd mobile 主题色定制
     const theme = require('./../package.json').theme;
     
@@ -167,7 +167,7 @@ npm  run eject
 ```
  $  npm install http-proxy-middleware  --save
 ```
-```
+```js
     const proxy = require("http-proxy-middleware");
     
     module.exports = function(app) {
@@ -202,7 +202,24 @@ $ npm install react-redux redux redux-thunk  --save-dev
 在最新的脚手架中webpack已经配置sass，只需要
 ```
  $  npm  install  sass-loader  --save
+```
 
+### 8. 装饰器@
+
+```
+ $  npm install babel-plugin-transform-class-properties @babel/plugin-proposal-decorators  --save-dev
+```
+在package.json中配置
+```js
+  "babel": {
+        ...
+        "plugins": [
+            ["@babel/plugin-proposal-decorators", { "legacy": true }],
+            ["@babel/plugin-proposal-class-properties", { "loose": true }]
+        ]
+        ...
+    },
+```
 
 
  
