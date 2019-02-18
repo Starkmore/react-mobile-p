@@ -112,11 +112,18 @@
     "babel": {
         "presets": [
             "react-app"
+        ],
+        "plugins": [
+            ["@babel/plugin-proposal-decorators", { "legacy": true }],
+            ["@babel/plugin-proposal-class-properties", { "loose": true }]
         ]
     },
     "devDependencies": {
+        "@babel/plugin-proposal-decorators": "^7.3.0",
         "babel-plugin-antd": "^0.5.1",
         "babel-plugin-import": "^1.11.0",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-plugin-transform-decorators-legacy": "^1.3.5",
         "css-loader": "^1.0.0",
         "http-proxy-middleware": "^0.19.1",
         "less": "^3.9.0",

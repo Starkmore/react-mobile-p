@@ -11,33 +11,9 @@ const mapStateToProps = (state, ownProps) => {
     indexData: state.homeRedurces.indexData
   };
 };
-class App extends Component {
-  // async  componentDidMount(){
-  //    const res= await  RequestIndex.homeList();
-  //    console.log(res)
-  // }
-  constructor(props) {
-    super(props);
-    this.state = {
-      color: "#000"
-    };
-  }
-  componentDidMount() {
-    this.props.homeData();
-  }
-  render() {
-    const {indexData} =this.props
-    return (
-      <div className="App">
-        <Button type="primary">primary</Button>
-        <div>少时诵诗书</div>
-      </div>
-    );
-  }
-}
 // reduex  部分
 
-class Detail extends Component {
+class Ranking extends Component {
   // async  componentDidMount(){
   //    const res= await  RequestIndex.homeList();
   //    console.log(res)
@@ -53,4 +29,4 @@ class Detail extends Component {
   }
 }
 
-export default Detail
+export default Ranking

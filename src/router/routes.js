@@ -1,36 +1,39 @@
-import React, {
-    lazy
-  } from "react";
-  import {
-    Route
-  } from "react-router-dom";
-  
-  const RouterLis = [{
-    component: lazy(() =>
-      import ("./../views/home/index.js")),
+import React, { lazy } from "react";
+import { Route } from "react-router-dom";
+
+// 路由部分
+import Home from "./../views/home/index.js";
+import Ranking from "./../views/ranking/index.js";
+import Detail from './../views/detail/index.js'
+import IndexDetail from './../views/home/indexDetail.js'
+const Routers = [
+  {
+    // component: lazy(() => import("./../views/home/index.js")),
+    // component: resolve => require(["./../views/home/index.js"], resolve),
+    component: Home,
     path: "/"
-  }, {
-    component: lazy(() =>
-      import ("./../views/home/index.js")),
+  },
+  {
+    component: Home,
     path: "/home"
-  }, {
-    component: lazy(() =>
-      import ("./../views/ranking/index.js")),
+  },
+  {
+    component: Ranking,
     path: "/my"
-  }, {
-    component: lazy(() =>
-      import ("./../views/detail/index.js")),
+  },
+  {
+    component: Detail,
     path: "/works"
-  }, {
-    component: lazy(() =>
-      import ("./../views/home/indexDetail.js")),
+  },
+  {
+    component: IndexDetail,
     path: "/indexDetail"
-  }];
-  
-  const RouterList = () => (
-    RouterLis.map((item, key) => {
-      return <Route key={key} exact path={item.path} component={item.component}/>;
-    })
-  );
-  
-  export default RouterList;
+  }
+];
+
+const RouterList = () =>
+  Routers.map((item, key) => {
+    return <Route key={key} exact path={item.path} component={item.component} />;
+  });
+
+export default RouterList;
